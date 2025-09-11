@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wundr Map — See your business more clearly</title>
+  <meta name="description" content="Wundr Map is a technology-enabled framework that uncovers bottlenecks, aligns teams, and gives leaders the confidence to invest in the right priorities." />
+  <meta name="theme-color" content="#1D2A4A" />
+  <style>
+    :root{
+      --indigo:#1D2A4A; --teal:#00A8A8; --aurora:#4DD0E1; --orange:#FF6F3C;
+      --grey:#A0A6B2; --sand:#D9CBB7; --charcoal:#111111; --white:#FFFFFF; --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--indigo);color:var(--white);} 
+    body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    a{color:var(--aurora);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin-inline:auto;padding:clamp(16px,2vw,24px)}
+    .section{padding:clamp(48px,8vw,96px) 0}
+    .grid{display:grid;gap:clamp(16px,2vw,24px)}
+    .btn{display:inline-block;border:none;cursor:pointer;background:var(--orange);color:var(--white);font-weight:700;padding:14px 20px;border-radius:14px;transition:transform .12s ease, box-shadow .2s ease;box-shadow:0 8px 20px rgba(255,111,60,.25);} .btn:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(255,111,60,.35)}
+    .btn--ghost{background:transparent;border:1px solid rgba(255,255,255,.25);padding:12px 18px}
+    .btn--ghost-2{background:var(--sand);border:1px solid rgba(0,0,0,.25);padding:12px 18px}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:rgba(255,255,255,.75)}
+    h1,h2,h3{line-height:1.2;margin:0 0 .5em 0} h1{font-size:clamp(32px,5vw,56px)} h2{font-size:clamp(24px,3.5vw,36px)} h3{font-size:clamp(18px,2vw,22px)}
+    p{margin:.2em 0 1em 0;color:rgba(255,255,255,.92)} .muted{color:rgba(255,255,255,.7)}
+
+    /* ---------------- HERO ---------------- */
+    .hero{position:relative; overflow:hidden;background:
+      radial-gradient(1200px 600px at 80% -20%, rgba(0,168,168,.25), transparent 60%),
+      radial-gradient(800px 400px at 10% -10%, rgba(77,208,225,.20), transparent 55%),
+      linear-gradient(180deg, #1d2a4a 0%, #152034 100%);}    
+    .hero .inner{display:grid;align-items:center;gap:28px;grid-template-columns:1.1fr .9fr}
+    @media (max-width:960px){ .hero .inner{grid-template-columns:1fr} }
+
+    .heroCard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(120%) blur(6px);border-radius:20px; padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+
+    .heroVis{display:flex;align-items:center;justify-content:center;background:#0e1a2a;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.06) inset}
+    .heroVis img{width:100%;height:auto;object-fit:contain}
+    @media (max-width:960px){ .heroVis{aspect-ratio:16/9;min-height:320px;height:auto} }
+
+    /* ---------------- OTHER SECTIONS ---------------- */
+    .light{background:linear-gradient(180deg, #f5f6f8 0%, #f1f3f6 100%); color:#0f1720}
+    .light p{color:#2a3340} .light .eyebrow{color:#435066}
+    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px; padding:18px 18px;}
+    .card--light{background:#fff;border:1px solid #e8ebf0}
+    .iconNode{width:14px;height:14px;border-radius:999px;background:var(--teal);box-shadow:0 0 0 6px rgba(0,168,168,.18), 0 0 22px rgba(77,208,225,.55);margin-right:10px; display:inline-block; vertical-align:middle;}
+    .cols-3{grid-template-columns:repeat(3,1fr)} .cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){ .cols-3,.cols-2{grid-template-columns:1fr} }
+    footer{background:#0f1626;color:var(--grey)} .logo{height:28px;display:block}
+    .center{text-align:center} .pill{display:inline-block;border:1px solid rgba(255,255,255,.16);padding:.35rem .75rem;border-radius:999px;color:var(--aurora)}
+  </style>
+</head>
+<body>
+  <header class="hero section" role="banner" aria-label="Wundr Map introduction">
+    <div class="wrap inner hero inner">
+      <div class="heroCard">
+        <div class="eyebrow">Wundr Map</div>
+        <h1>See your business more clearly.</h1>
+        <h2 style="margin-top:.2em;color:var(--teal);font-weight:700">with Wundr Map</h2>
+        <p style="margin-top:.6em;max-width:60ch">
+          A technology-enabled framework that uncovers bottlenecks, aligns teams, and gives leaders
+          the confidence to invest in the right priorities.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:.6em">
+          <a class="btn" href="#book">Book a discovery call</a>
+          <a class="btn btn--ghost" href="#how">How it works</a>
+        </div>
+        <p class="muted" style="margin-top:.8em">
+          Inspired by <em>The Blind Men and the Elephant</em> — many true perspectives, one shared reality.
+        </p>
+      </div>
+
+      <div class="heroVis" aria-hidden="true">
+        <img src="assets/star-elephant.png" alt="" />
+      </div>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="why">
+    <div class="wrap grid cols-2">
+      <div>
+        <div class="pill">Why Wundr Map?</div>
+        <h2 id="why" style="margin-top:.4em">Many perspectives. One shared truth.</h2>
+        <p>In complex organisations, each team sees a part of the whole. Sales feels demand, Ops feels throughput,
+          Compliance feels risk. Each view is true, yet partial. Wundr Map brings these perspectives together into a
+          coherent picture — so you can act with confidence.</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><span class="iconNode"></span>Reveal how work actually flows</li>
+          <li><span class="iconNode"></span>Surface hidden bottlenecks and risks</li>
+          <li><span class="iconNode"></span>Align people, process, and technology</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="eyebrow">From the blog</p>
+        <h3>The Blind Men and the Elephant: embracing AI to understand our shared humanity</h3>
+        <p class="muted">A reflection on seeing the whole, not just the parts — written over a year ago, and the heart behind Wundr Map.</p>
+        <a class="btn btn--ghost" href="https://www.wundr.space/post/the-blind-men-and-the-elephant-embracing-ai-to-understand-our-shared-humanity" target="_blank" rel="noopener">Read the post</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light" aria-labelledby="benefits">
+    <div class="wrap">
+      <p class="eyebrow">Benefits</p>
+      <h2 id="benefits">Clarity. Confidence. Momentum.</h2>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card--light card"><h3>Clarity</h3><p>See how value flows end-to-end, where work sticks, and what truly drives outcomes.</p></div>
+        <div class="card--light card"><h3>Confidence</h3><p>Make decisions with less guesswork. Prioritise the right investments at the right time.</p></div>
+        <div class="card--light card"><h3>Momentum</h3><p>Reduce rework, accelerate delivery, and build capability that compounds.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section" aria-labelledby="how-title">
+    <div class="wrap">
+      <p class="eyebrow">Process</p>
+      <h2 id="how-title">How it works</h2>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card"><h3>1. Discovery & Alignment</h3><p>We listen across the organisation and establish common language, goals, and constraints.</p></div>
+        <div class="card"><h3>2. System Mapping</h3><p>We map how work actually flows — people, process, data — and where value gets stuck.</p></div>
+        <div class="card"><h3>3. Value Design</h3><p>We frame opportunities, sequence priorities, and define pragmatic steps forward.</p></div>
+        <div class="card"><h3>4. Enablement</h3><p>We align roles, ways of working, and metrics, preparing for sustainable change.</p></div>
+        <div class="card"><h3>5. Automation & AI</h3><p>Where it makes sense, we prototype automations and AI-assisted workflows that stick.</p></div>
+        <div class="card"><h3>6. Support</h3><p>We help you embed improvements and learn as you go — not one-and-done, but momentum.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="proof">
+    <div class="wrap grid cols-2">
+      <div>
+        <p class="eyebrow">Case Study</p>
+        <h2 id="proof">Clarity in action</h2>
+        <p><em>“The System Mapping &amp; Value Design work with Wundr Space gave us a clear, detailed view of how our business truly operates.
+          It uncovered connections and opportunities we’d previously overlooked and equipped us with a practical framework to make better decisions with confidence.”</em></p>
+        <p class="muted">— Sam Pannell, Head of Operations, Liquid Friday</p>
+        <p class="muted">Focus areas following the work: scalable growth foundations, customer experience, and data readiness.</p>
+      </div>
+      <div class="card">
+        <h3>What changed</h3>
+        <ul>
+          <li>Shared language across teams reduced re-work</li>
+          <li>Clearer prioritisation of growth and customer experience initiatives</li>
+          <li>Faster agreement on data readiness and governance steps</li>
+        </ul>
+        <a class="btn btn--ghost" href="#book">Talk to us about a pilot</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="section light center" aria-labelledby="cta">
+    <div class="wrap">
+      <p class="eyebrow">Next step</p>
+      <h2 id="cta">Map your business. Unlock your future.</h2>
+      <p>Let’s start with a short conversation about where you’re heading and what clarity would change for you.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="https://calendly.com/your-link" target="_blank" rel="noopener">Schedule a discovery call</a>
+        <a class="btn btn--ghost-2" href="mailto:hello@wundr.space">Email us now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="wrap grid cols-2" style="align-items:center">
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <div class="logo" aria-label="Wundr Space logo">
+          <img class="logo" src="assets/wundr-space-logo-white.svg" alt="Wundr Space" />
+        </div>
+        <div class="muted">Wundr Map by Wundr Space</div>
+      </div>
+      <div style="text-align:right">
+        <a href="https://www.wundr.space" target="_blank" rel="noopener">wundr.space</a>
+        <span class="muted"> · </span>
+        <a href="https://www.linkedin.com/company/wundr-space/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
