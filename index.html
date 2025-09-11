@@ -48,13 +48,44 @@
       radial-gradient(1200px 600px at 80% -20%, rgba(0,168,168,.25), transparent 60%),
       radial-gradient(800px 400px at 10% -10%, rgba(77,208,225,.20), transparent 55%),
       linear-gradient(180deg, #1d2a4a 0%, #152034 100%);}    
-    .hero .inner{display:grid;align-items:center;gap:28px;grid-template-columns:1.1fr .9fr}
-    @media (max-width:960px){ .hero .inner{grid-template-columns:1fr} }
+    
+     /* Desktop stays two columns */
+    .hero .inner{
+      display:grid;
+      align-items:center;
+      gap:28px;
+      grid-template-columns:1.1fr .9fr;
+    }
+
+    /* MOBILE: stack, and remove the old aspect/min-height rules */
+    @media (max-width:960px){
+      .hero .inner{ display:block; }
+      .heroVis{
+        margin-top:16px;
+        /* remove any previous aspect-ratio/min-height you added */
+        aspect-ratio:auto !important;
+        min-height:auto !important;
+        height:auto;
+      }
+    }
+
+    /* Make sure the image sizes itself naturally */
+    .heroVis img{
+      display:block;
+      width:100%;
+      height:auto;          /* keep proportions */
+      object-fit:contain;   /* change to 'cover' if you want full-bleed */
+    }
 
     .heroCard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(120%) blur(6px);border-radius:20px; padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.25);}
 
     .heroVis{display:flex;align-items:center;justify-content:center;background:#0e1a2a;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.06) inset}
-    .heroVis img{width:100%;height:auto;object-fit:contain}
+    .heroVis img{
+      display:block;           /* removes inline-gap */
+      width:100%;
+      height:100%;
+      object-fit: contain;     /* or 'cover' if you prefer full-bleed crop */
+    }
     @media (max-width:960px){ .heroVis{aspect-ratio:16/9;min-height:320px;height:auto} }
 
     /* ---------------- OTHER SECTIONS ---------------- */
@@ -90,9 +121,8 @@
       </div>
 
       <div class="heroVis" aria-hidden="true">
-        <img src="assets/star-elephant.png" alt="" />
+        <img src="/assets/star-elephant.png" alt="" width="1200" height="900" loading="eager" decoding="async" />
       </div>
-    </div>
   </header>
 
   <section class="section" aria-labelledby="why">
