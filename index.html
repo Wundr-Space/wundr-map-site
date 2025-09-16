@@ -93,6 +93,12 @@
     .light p{color:#2a3340} .light .eyebrow{color:#435066}
     .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px; padding:18px 18px;}
     .card--light{background:#fff;border:1px solid #e8ebf0}
+    .card img {
+      filter: invert(1); /* makes black → white */
+    }
+    .card--light img {
+      filter: none; /* restores original black icon */
+    }
     .iconNode{width:14px;height:14px;border-radius:999px;background:var(--teal);box-shadow:0 0 0 6px rgba(0,168,168,.18), 0 0 22px rgba(77,208,225,.55);margin-right:10px; display:inline-block; vertical-align:middle;}
     .cols-3{grid-template-columns:repeat(3,1fr)} .cols-2{grid-template-columns:repeat(2,1fr)}
     @media (max-width:900px){ .cols-3,.cols-2{grid-template-columns:1fr} }
@@ -131,8 +137,7 @@
       <div>
         <div class="pill">Why Wundr Map?</div>
         <h2 id="why" style="margin-top:.4em">Many perspectives. One shared truth.</h2>
-        <p>In complex organisations, each team sees a part of the whole. Sales feels demand, Ops feels throughput,
-          Compliance feels risk. Each view is true, yet partial. Wundr Map brings these perspectives together into a
+        <p>In complex organisations, each team sees a part of the whole. Each view is true, yet partial. Wundr Map brings these perspectives together into a
           coherent picture — so you can act with confidence.</p>
         <ul style="list-style:none;padding:0;margin:0">
           <li><span class="iconNode"></span>Reveal how work actually flows</li>
@@ -158,27 +163,150 @@
       <p class="eyebrow">Benefits</p>
       <h2 id="benefits">Clarity. Confidence. Momentum.</h2>
       <div class="grid cols-3" style="margin-top:18px">
-        <div class="card--light card"><h3>Clarity</h3><p>See how value flows end-to-end, where work sticks, and what truly drives outcomes.</p></div>
-        <div class="card--light card"><h3>Confidence</h3><p>Make decisions with less guesswork. Prioritise the right investments at the right time.</p></div>
-        <div class="card--light card"><h3>Momentum</h3><p>Reduce rework, accelerate delivery, and build capability that compounds.</p></div>
+        <div class="card--light card">
+          <img src="assets/icons/diamond.svg" alt="Diamond icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Clarity</h3>
+          <p>See how value flows end-to-end, where work sticks, and what truly drives outcomes.</p>
+        </div>
+        <div class="card--light card">
+          <img src="assets/icons/bullseye.svg" alt="Bullseye icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Confidence</h3>
+          <p>Make decisions with less guesswork. Prioritise the right investments at the right time.</p>
+        </div>
+        <div class="card--light card">
+          <img src="assets/icons/speed.svg" alt="Spped icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Momentum</h3>
+          <p>Reduce rework, accelerate delivery, and build capability that compounds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="what" class="section" aria-labelledby="what-title">
+    <div class="wrap">
+      <img src="assets/elephant-artefacts.png" alt="Elephant artefacts" 
+          style="display:block;width:100%;height:auto;margin-bottom:24px;border-radius:12px;" />
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">What you get</p>
+      <h2 id="what-title">Tangible outputs you can use on day one</h2>
+      <p class="muted" style="max-width:70ch">
+        The engagement produces a set of practical artefacts that create clarity, align leaders, and move insight into action.
+      </p>
+
+      <div class="grid cols-3" style="margin-top:18px">
+        <article class="card card">
+          <img src="assets/icons/map.svg" alt="Landscape Map icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Landscape Map</h3>
+          <p><strong>What it is:</strong> A structured overview of systems, workflows, roles and interdependencies.</p>
+          <p><strong>Why it’s valuable:</strong> Reveals the real operational terrain across people and technology.</p>
+        </article>
+
+        <article class="card card">
+          <img src="assets/icons/grid.svg" alt="Opportunity Matrix icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Opportunity Matrix</h3>
+          <p><strong>What it is:</strong> Prioritised, high-impact opportunities mapped by effort and urgency.</p>
+          <p><strong>Why it’s valuable:</strong> Filters noise and highlights quick wins and strategic bets.</p>
+        </article>
+
+        <article class="card card">
+          <img src="assets/icons/list.svg" alt="Challenges Catalogue icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Challenges Catalogue</h3>
+          <p><strong>What it is:</strong> Thematic summary of recurring issues and unmet needs.</p>
+          <p><strong>Why it’s valuable:</strong> Separates symptoms from root causes and builds a shared case for change.</p>
+        </article>
+
+        <article class="card card">
+          <img src="assets/icons/sliders.svg" alt="Alignment Scorecard icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Alignment Scorecard</h3>
+          <p><strong>What it is:</strong> Qualitative view of alignment across vision, goals, metrics and accountability.</p>
+          <p><strong>Why it’s valuable:</strong> Surfaces gaps early so teams can move in step, with less friction.</p>
+        </article>
+
+        <article class="card card">
+          <img src="assets/icons/compass.svg" alt="Ways Forward Playbook icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Ways Forward Playbook</h3>
+          <p><strong>What it is:</strong> A set of tailored next steps with indicative timeframes and effort.</p>
+          <p><strong>Why it’s valuable:</strong> Turns insight into action and gives leaders confident choices.</p>
+        </article>
+
+        <article class="card card">
+          <img src="assets/icons/message-square.svg" alt="Shared Language and Models icon" style="width:40px;height:40px;margin-bottom:12px" />
+          <h3>Shared Language &amp; Models</h3>
+          <p><strong>What it is:</strong> Common frameworks, metaphors and definitions that stick.</p>
+          <p><strong>Why it’s valuable:</strong> Improves communication and sustains momentum across teams.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="how" class="section" aria-labelledby="how-title">
+
+  <section id="how" class="section light" aria-labelledby="how-title">
+     <div class="wrap">
+      <img src="assets/elephant-journey.png" alt="Elephant journey" 
+          style="display:block;width:100%;height:auto;margin-bottom:24px;border-radius:12px;" />
+    </div>
     <div class="wrap">
       <p class="eyebrow">Process</p>
       <h2 id="how-title">How it works</h2>
+
       <div class="grid cols-3" style="margin-top:18px">
-        <div class="card"><h3>1. Discovery & Alignment</h3><p>We listen across the organisation and establish common language, goals, and constraints.</p></div>
-        <div class="card"><h3>2. System Mapping</h3><p>We map how work actually flows — people, process, data — and where value gets stuck.</p></div>
-        <div class="card"><h3>3. Value Design</h3><p>We frame opportunities, sequence priorities, and define pragmatic steps forward.</p></div>
-        <div class="card"><h3>4. Enablement</h3><p>We align roles, ways of working, and metrics, preparing for sustainable change.</p></div>
-        <div class="card"><h3>5. Automation & AI</h3><p>Where it makes sense, we prototype automations and AI-assisted workflows that stick.</p></div>
-        <div class="card"><h3>6. Sustained Momentum</h3><p>We help you embed improvements and learn as you go — not one-and-done, but momentum.</p></div>
-       </div>
+        <article class="card card--light">
+          <img src="assets/icons/crosshair.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>1. Define Scope</h3>
+          <p>Set the boundaries and objectives together so we start with focus.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/target.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>2. Plan & Size</h3>
+          <p>Turn goals into a practical plan of activities and effort.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/repeat.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>3. Iterative Workshops</h3>
+          <p>Engage teams in structured sessions, building a shared picture step by step.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/filter.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>4. Prioritise Deep Dives</h3>
+          <p>Identify the hotspots that matter most for clarity and confidence.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/search.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>5. Deep Dives</h3>
+          <p>Go beneath the surface to capture how work really flows.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/layers.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>6. Integrate Insights</h3>
+          <p>Bring breadth and depth together to create stronger insights.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/map.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>7. Generate Ways Forward</h3>
+          <p>Translate insights into initiatives, sized and sequenced for impact.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/shield.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>8. Review & Assure</h3>
+          <p>Align leadership on the findings and decisions.</p>
+        </article>
+
+        <article class="card card--light">
+          <img src="assets/icons/rocket.svg" alt="" style="width:36px;height:36px;margin-bottom:10px">
+          <h3>9. Operationalise</h3>
+          <p>Embed the work into your tools and workflows so it sticks.</p>
+        </article>
+      </div>
     </div>
   </section>
+
 
   <section class="section" aria-labelledby="proof">
     <div class="wrap grid cols-2">
@@ -189,6 +317,7 @@
           It uncovered connections and opportunities we’d previously overlooked and equipped us with a practical framework to make better decisions with confidence.”</em></p>
         <p class="muted">— Sam Pannell, Head of Operations, Liquid Friday</p>
         <p class="muted">Immediate focus areas following the work: scalable growth foundations, customer experience, and data readiness.</p>
+        <img src="assets/liquid-friday-logo.png" alt="Liquid Friday logo" style="max-width:100%; margin:20px auto 0; display:block;"/>
       </div>
       <div class="card">
         <h3>What changed?</h3>
